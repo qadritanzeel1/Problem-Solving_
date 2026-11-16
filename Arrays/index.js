@@ -103,3 +103,39 @@ let prompt = require("prompt-sync")()
 
 // array left rotation by k elements 
 
+// let arr = [1,2,3,4,5,6]
+// let k = Number(prompt("Please enter steps to move left"))
+// let i = 0
+// while(i<k){
+// let copy = arr[0]
+
+// for(let j =0;j<arr.length;j++){
+//     arr[j] = arr[j+1]
+// }
+// i++
+// arr[arr.length-1] = copy
+// }
+
+// console.log(arr)
+
+
+//optimised approach
+
+let arr = [1,2,3,4,5]
+
+let k = Number(prompt("Please enter a number"))
+k=k%arr.length;
+reverse(arr,0,k-1)
+reverse(arr,k,arr.length-1)
+reverse(arr,0,arr.length-1)
+
+console.log(arr)
+function reverse(arr,i,j){
+while(i<j){
+    let temp = arr[i]
+arr[i] = arr[j]
+arr[j] = temp
+i++
+j--
+}
+}
