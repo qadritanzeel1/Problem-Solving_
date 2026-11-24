@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')()
 //reverse the array
 let arr = [1,2,3,4,5]
 function reverse(a){
@@ -50,6 +51,26 @@ function leftRotation(){
     return arr
 }
 
-console.log(leftRotation())
+// console.log(leftRotation())
 
+//array left rotation by k elements 
+let nums = [1,2,3,4,5,6]
+let k = Number(prompt("Please enter a number"))
+k= k%arr.length
+k_rotation(nums,0,k-1)
+k_rotation(nums,k,nums.length-1)
+k_rotation(nums,0,nums.length-1)
+
+function k_rotation(nums,i,j){
+    while(i<j){
+        let temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
+        i++
+        j--
+    }
+    
+}
+
+console.log(nums)
 
