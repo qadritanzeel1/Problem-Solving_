@@ -39,4 +39,27 @@ function selectionSort(){
     return arr
 }
 
+// console.log(selectionSort())
+
+
+function insertionSort(){
+    let arr = [18,12,19,14,7,10,11,16,15,17]
+let n = arr.length
+    for(let i =1;i<n;i++){
+        let key = arr[i]
+        let j = i-1
+        while(j>0 && arr[j]>key){
+            arr[j+1] = arr[j]
+        i--
+        }
+        arr[j+1] = key
+    }
+    return arr
+
+}
+
 console.log(selectionSort())
+
+
+// revision for sunday
+
